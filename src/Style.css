@@ -1,0 +1,9 @@
+.backgroundImg {
+    background: url(../public/background.jpeg) no-repeat; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 1024px;
+  
+  }
