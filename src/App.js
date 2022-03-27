@@ -8,13 +8,14 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import FutureData from './Components/FutureData/FutureData';
 
 
+
 function App() {
   return (
     <BrowserRouter>
       <div className="App backgroundImg">
         
         <Routes>
-          <Route path="/weather-app" element={[<NavBar />]}></Route>
+          {/* <Route path="/weather-app" element={[<NavBar />]}></Route> */}
 
           <Route path="/Temp_Celsius" element={[<NavBar/>,<CurrentData />, <FutureData/>]}></Route>
 
