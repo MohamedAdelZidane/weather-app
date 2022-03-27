@@ -1,41 +1,21 @@
 #city_name{
     
-width: 350px;
-height: 75px;
-left: 120px;
-top: 254px;
-
-font-family: 'Work Sans';
-font-style: normal;
-font-weight: 700;
-font-size: 64px;
-line-height: 75px;
-/* identical to box height */
-
-letter-spacing: 0.05em;
-
-color: #FFFFFF;
-
-mix-blend-mode: normal;
+    font-weight: 700;
+    font-size: 64px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    text-align: left;
+    display: block;
 }
 
 #todays_date{
     
-width: 167px;
-height: 23px;
-left: 120px;
-top: 339px;
-
-font-family: 'Work Sans';
-font-style: normal;
-font-weight: 700;
-font-size: 20px;
-line-height: 23px;
-letter-spacing: 0.05em;
-
-color: #FFFFFF;
-
-mix-blend-mode: normal;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    text-align: left;
+    display: block;
 }
 
 #current_icon{
@@ -44,6 +24,8 @@ width: 97px;
 height: 97px;
 left: 120px;
 top: 397px;
+text-align: left;
+    display: block;
 }
 
 #current_summary{
@@ -62,79 +44,35 @@ line-height: 35px;
 color: #FFFFFF;
 
 mix-blend-mode: normal;
+text-align: left;
+    display: block;
 }
 
 #current_temp{
     
-width: 182px;
-height: 169px;
-left: 1093px;
-top: 273px;
-
-font-family: 'Work Sans';
-font-style: normal;
-font-weight: 700;
-font-size: 144px;
-line-height: 169px;
-/* identical to box height */
-
-letter-spacing: 0.05em;
-
-color: #FFFFFF;
+    height: 169px;
+    font-weight: 700;
+    font-size: 144px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    text-align: right;
+    display: block;
 }
 
 #high_low_temp{
-    
-width: 22px;
-height: 56px;
-left: 1184px;
-top: 450px;
-
-font-family: 'Work Sans';
-font-style: normal;
-font-weight: 400;
-font-size: 48px;
-line-height: 56px;
-letter-spacing: 0.05em;
-
-color: #FFFFFF;
-
-
-
-/* Today's High */
-
-
-
-width: 75px;
-height: 67px;
-left: 1103px;
-top: 442px;
-
-
-
-/* Today's Low */
-
-
-
-width: 83px;
-height: 67px;
-left: 1216px;
-top: 443px;
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    text-align: right;
+    display: block;
 }
 
 #short_summary{
     
-width: 317px;
-height: 28px;
-left: 973px;
-top: 532px;
-
-font-family: 'Work Sans';
-font-style: normal;
-font-weight: 600;
-font-size: 24px;
-line-height: 28px;
-text-align: center;
-
-color: #FFFFFF;
+    font-weight: 600;
+    font-size: 24px;
+    color: #FFFFFF;
+    text-align: right;
+    display: block;
 }

@@ -112,12 +112,12 @@ class CurrentData extends Component {
         }
     }
 
-    convertTempToInt(current_temp){
+    convertTempToInt(current_temp) {
         let parseInt = current_temp ^ 0;
         console.log(parseInt)
 
         return parseInt
-        
+
     }
 
     render() {
@@ -127,47 +127,49 @@ class CurrentData extends Component {
         let current_text_summary = this.state.current_data.icon;
         console.log(current_temp)
         return (
-            <div>
-                
-                    <div class="row">
-                        <div class="col-6">
-                            <div>
-                                <span id="city_name">New Cairo</span>
-                            </div>
-                            <div>
-                                <span id="todays_date">{this.handleDateFormat(current_date)}</span>
-                            </div>
-                            <div>
-                                <span id="current_icon"> {this.displayIcon()}
+            <div class="container">
 
 
-                                </span>
-                            </div>
-                            <div>
-                                <span id="current_summary">{current_text_summary}</span>
-                            </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <div>
+                            <span id="city_name">New Cairo</span>
                         </div>
-
-
-
-                        <div class="col-6">
-                            <div>
-
-
-                                <span id="current_temp">
-                                    {this.convertTempToInt(current_temp)} 
-                                </span>
-                            </div>
-                            <div>
-                                <span id="high_low_temp">81 / 63</span>
-                            </div>
-                            <div id="short_summary">
-                                <span>{current_short_summary}</span>
-                            </div>
+                        <div>
+                            <span id="todays_date">{this.handleDateFormat(current_date)}</span>
                         </div>
+                        <div>
+                            <span id="current_icon"> {this.displayIcon()}
 
+
+                            </span>
+                        </div>
+                        <div>
+                            <span id="current_summary">{current_text_summary}</span>
+                        </div>
                     </div>
-                
+
+
+
+                    <div class="col-6">
+                        <div>
+
+
+                            <span id="current_temp">
+                                {this.convertTempToInt(current_temp)}
+                            </span>
+                        </div>
+                        <div>
+                            <span id="high_low_temp">81 / 63</span>
+                        </div>
+                        <div id="short_summary">
+                            <span>{current_short_summary}</span>
+                        </div>
+                    </div>
+
+                </div>
+
 
 
             </div>

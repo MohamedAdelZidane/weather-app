@@ -29,8 +29,36 @@ class NavBar extends Component {
     render() {
 
         return (
-            <div class="container-fluid">
-                <div class="row">
+            <div >
+
+
+                <nav class="navbar navbar-light bg-light">
+                    <div class="container-fluid">
+                        <a class="navbar-brand">Instaweather</a>
+                        <form class="d-flex">
+                            <NavLink active className={({ isActive }) => (isActive ? "link-active" : "link")} to={"Temp_Celsius"} >
+                                <RecieveProps sendToggleValue={this.state.toggle_value} />
+                                <button onClick={(e) => this.getBtnValue(e)} type="submit" class="c_button">C</button>
+
+                            </NavLink>
+                            <NavLink className={({ isActive }) => (isActive ? "link-active" : "link")} to={"Temp_Celsius"} >
+                                {/* <RecieveProps sendTrackingNumber={this.state.trackingNumber} /> */}
+                                <button onClick={(e) => this.getBtnValue(e)} type="submit" class="f_button">F</button>
+
+                            </NavLink>
+                        </form>
+                    </div>
+                </nav>
+
+
+
+
+
+
+
+
+
+                {/* <div class="row">
                     <div class="col-6">
                         <a class="navbar-brand" id="app_name">Instaweather</a>
                     </div>
@@ -42,13 +70,13 @@ class NavBar extends Component {
 
                         </NavLink>
                         <NavLink className={({ isActive }) => (isActive ? "link-active" : "link")} to={"Temp_Celsius"} >
-                            {/* <RecieveProps sendTrackingNumber={this.state.trackingNumber} /> */}
+                           
                             <button onClick={(e) => this.getBtnValue(e)} type="submit" class="f_button">F</button>
 
                         </NavLink>
                     </div>
 
-                </div>
+                </div> */}
 
 
 

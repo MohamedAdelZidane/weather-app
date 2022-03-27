@@ -12,17 +12,13 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App backgroundImg">
-        {/* <NavBar /> */}
-
-        {/* <CurrentData/> */}
+        
         <Routes>
-          <Route path="/" element={[<NavBar />]}></Route>
+          <Route path="/weather-app" element={[<NavBar />]}></Route>
 
           <Route path="/Temp_Celsius" element={[<NavBar/>,<CurrentData />, <FutureData/>]}></Route>
 
-          {/* <Route path="/shippmentDetails" element={[<TrackingCard />,<ShippingDetails /> ]}></Route> */}
-
-
+         
         </Routes>
       </div>
     </BrowserRouter>
