@@ -1,5 +1,5 @@
 #city_name{
-    position: absolute;
+    
 width: 350px;
 height: 75px;
 left: 120px;
@@ -20,7 +20,7 @@ mix-blend-mode: normal;
 }
 
 #todays_date{
-    position: absolute;
+    
 width: 167px;
 height: 23px;
 left: 120px;
@@ -39,7 +39,7 @@ mix-blend-mode: normal;
 }
 
 #current_icon{
-    position: absolute;
+    
 width: 97px;
 height: 97px;
 left: 120px;
@@ -47,7 +47,7 @@ top: 397px;
 }
 
 #current_summary{
-    position: absolute;
+    
 width: 130px;
 height: 35px;
 left: 120px;
@@ -65,7 +65,7 @@ mix-blend-mode: normal;
 }
 
 #current_temp{
-    position: absolute;
+    
 width: 182px;
 height: 169px;
 left: 1093px;
@@ -84,7 +84,7 @@ color: #FFFFFF;
 }
 
 #high_low_temp{
-    position: absolute;
+    
 width: 22px;
 height: 56px;
 left: 1184px;
@@ -104,7 +104,7 @@ color: #FFFFFF;
 /* Today's High */
 
 
-position: absolute;
+
 width: 75px;
 height: 67px;
 left: 1103px;
@@ -115,7 +115,7 @@ top: 442px;
 /* Today's Low */
 
 
-position: absolute;
+
 width: 83px;
 height: 67px;
 left: 1216px;
@@ -123,7 +123,7 @@ top: 443px;
 }
 
 #short_summary{
-    position: absolute;
+    
 width: 317px;
 height: 28px;
 left: 973px;

@@ -5,25 +5,26 @@ import APICall from './Components/APICall';
 import NavBar from './Components/Navbar/Navbar';
 import CurrentData from './Components/CurrentData/CurrentData';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import FutureData from './Components/FutureData/FutureData';
 
 
 function App() {
   return (
     <BrowserRouter>
-    <div className="App backgroundImg">
-     <NavBar/>
-     
-     {/* <CurrentData/> */}
-<Routes>
-     <Route path="/" element={[<NavBar />]}></Route>
-          
-          <Route path="/Temp_Celsius" element={<CurrentData />}></Route>
+      <div className="App backgroundImg">
+        {/* <NavBar /> */}
 
-        {/* <Route path="/shippmentDetails" element={[<TrackingCard />,<ShippingDetails /> ]}></Route> */}
+        {/* <CurrentData/> */}
+        <Routes>
+          <Route path="/" element={[<NavBar />]}></Route>
+
+          <Route path="/Temp_Celsius" element={[<NavBar/>,<CurrentData />, <FutureData/>]}></Route>
+
+          {/* <Route path="/shippmentDetails" element={[<TrackingCard />,<ShippingDetails /> ]}></Route> */}
 
 
         </Routes>
-    </div>
+      </div>
     </BrowserRouter>
   );
 }
