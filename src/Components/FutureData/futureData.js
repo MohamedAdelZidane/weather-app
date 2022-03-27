@@ -20,7 +20,7 @@ export const RecieveProps = (props) => {
 
 }
 
-const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
 
 var image1 = <svg width="97" height="97" viewBox="0 0 97 97" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M68.8508 73.8998C83.9882 73.8998 96.2595 61.8581 96.2595 47.0038C96.2595 32.1495 83.9882 20.1077 68.8508 20.1077C53.7133 20.1077 41.442 32.1495 41.442 47.0038C41.442 61.8581 53.7133 73.8998 68.8508 73.8998Z" fill="#FCB641" />
@@ -50,6 +50,7 @@ class FutureData extends Component {
         this.state = {
             current_data: [],
             hourly_data: [],
+            daily_data:[],
             icon: "",
             temp: "",
         }
@@ -67,7 +68,8 @@ class FutureData extends Component {
             this.setState({
                 current_data: res.data.currently,
                 icon: res.data.currently.icon,
-                hourly_data: res.data.hourly.data
+                hourly_data: res.data.hourly.data,
+                daily_data: res.data.daily.data,
             })
         }, (err) => {
             alert(err);
@@ -88,6 +90,14 @@ class FutureData extends Component {
         return (formattedTime);
     }
 
+    handleDateFormat(daily_data) {
+        var d = new Date(daily_data * 1000);
+        var formattedDate = d.getDate() + ", " + d.getFullYear();
+        let day = days[d.getDay()];
+        formattedDate = day ;
+        return (formattedDate);
+    }
+
     displayIcon(data) {
         let counter = images.length - 1;
         let iconText = data;
@@ -99,6 +109,19 @@ class FutureData extends Component {
         }
     }
 
+    displayDailyIcon(daily_data) {
+        let counter = images.length - 1;
+        let iconText = daily_data;
+        console.log(daily_data)
+        if (iconText === "clear-night") {
+            return images[0]
+        } else {
+            return images[1]
+        }
+    }
+
+    
+
     convertTempToInt(data) {
         let parseInt = data ^ 0;
         console.log(parseInt)
@@ -106,6 +129,17 @@ class FutureData extends Component {
         return parseInt
 
     }
+
+    convertDailyTempToInt(daily_data) {
+        let parseInt = daily_data ^ 0;
+        console.log(parseInt)
+
+        return parseInt
+
+    }
+
+
+    
 
     render() {
         // let hourly_temp = this.state.hourly_data;
@@ -172,10 +206,6 @@ class FutureData extends Component {
                                                <div>
                                                    <span>{this.convertTempToInt(data.apparentTemperature)}</span>
                                                </div>
-                                                  
-
-                                                
-
                                             </div>
                                         )}
 
@@ -188,7 +218,31 @@ class FutureData extends Component {
 
                             </div>
 
-                            <div class="tab-pane fade" id="daily" role="tabpanel" aria-labelledby="daily-tab">...</div>
+                            <div class="tab-pane fade" id="daily" role="tabpanel" aria-labelledby="daily-tab">
+
+
+                            <div class="row" style={{ overflow: 'auto' }}>
+                                    <div class="scrolling-wrapper row mx-0 flex-nowrap mt-6 pt-3">
+                                        {this.state.daily_data.map(daily_data =>
+
+                                            <div class="col-auto">
+                                               
+                                               <div>
+                                                   <span>{this.handleDateFormat(daily_data.time)}</span>
+                                               </div>
+                                               <div>
+                                                   <span>{this.displayDailyIcon(daily_data.icon)}</span>
+                                               </div>
+                                               <div>
+                                                   <span>{this.convertDailyTempToInt(daily_data.apparentTemperatureHigh)}</span>
+                                               </div>
+                                            </div>
+                                        )}
+
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
 
