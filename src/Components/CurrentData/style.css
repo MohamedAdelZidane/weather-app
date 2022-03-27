@@ -1,0 +1,140 @@
+#city_name{
+    position: absolute;
+width: 350px;
+height: 75px;
+left: 120px;
+top: 254px;
+
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 64px;
+line-height: 75px;
+/* identical to box height */
+
+letter-spacing: 0.05em;
+
+color: #FFFFFF;
+
+mix-blend-mode: normal;
+}
+
+#todays_date{
+    position: absolute;
+width: 167px;
+height: 23px;
+left: 120px;
+top: 339px;
+
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 23px;
+letter-spacing: 0.05em;
+
+color: #FFFFFF;
+
+mix-blend-mode: normal;
+}
+
+#current_icon{
+    position: absolute;
+width: 97px;
+height: 97px;
+left: 120px;
+top: 397px;
+}
+
+#current_summary{
+    position: absolute;
+width: 130px;
+height: 35px;
+left: 120px;
+top: 510px;
+
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+line-height: 35px;
+
+color: #FFFFFF;
+
+mix-blend-mode: normal;
+}
+
+#current_temp{
+    position: absolute;
+width: 182px;
+height: 169px;
+left: 1093px;
+top: 273px;
+
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 144px;
+line-height: 169px;
+/* identical to box height */
+
+letter-spacing: 0.05em;
+
+color: #FFFFFF;
+}
+
+#high_low_temp{
+    position: absolute;
+width: 22px;
+height: 56px;
+left: 1184px;
+top: 450px;
+
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+line-height: 56px;
+letter-spacing: 0.05em;
+
+color: #FFFFFF;
+
+
+
+/* Today's High */
+
+
+position: absolute;
+width: 75px;
+height: 67px;
+left: 1103px;
+top: 442px;
+
+
+
+/* Today's Low */
+
+
+position: absolute;
+width: 83px;
+height: 67px;
+left: 1216px;
+top: 443px;
+}
+
+#short_summary{
+    position: absolute;
+width: 317px;
+height: 28px;
+left: 973px;
+top: 532px;
+
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 28px;
+text-align: center;
+
+color: #FFFFFF;
+}

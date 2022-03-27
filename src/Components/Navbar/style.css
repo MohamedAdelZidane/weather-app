@@ -1,0 +1,55 @@
+.c_button{
+    background-color: #E5E5E5;
+    border: none;
+    border-left: 1px solid black;
+    width: 76px;
+    height: 48px;
+     
+    
+}
+
+.f_button{
+    background-color: inherit;
+    background-repeat: no-repeat;
+    border-left: none;
+    border: none;
+    margin: 20px
+}
+
+
+.navbar{
+    margin: 0 100px;
+}
+
+#app_name{
+    position: absolute;
+width: 301px;
+height: 42px;
+left: 120px;
+top: 41px;
+
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 42px;
+letter-spacing: 0.05em;
+
+color: #FFFFFF;
+
+mix-blend-mode: normal;
+}
+
+#toggle_buttons{
+ 
+    left: 120px;
+    top: 200px;
+
+
+
+}
+
+
+
+  
+
