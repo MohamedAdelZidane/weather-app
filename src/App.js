@@ -15,7 +15,7 @@ function App() {
       <div className="App backgroundImg">
         
         <Routes>
-          {/* <Route path="/weather-app" element={[<NavBar />]}></Route> */}
+          <Route path="/" element={[<NavBar/>,<CurrentData />, <FutureData/>]}></Route>
 
           <Route path="/Temp_Celsius" element={[<NavBar/>,<CurrentData />, <FutureData/>]}></Route>
 

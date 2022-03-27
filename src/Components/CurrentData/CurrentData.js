@@ -48,6 +48,7 @@ class CurrentData extends Component {
         super(props);
         this.state = {
             current_data: [],
+            daily_high_temp: [],
             icon: "",
             temp: "",
         }
@@ -65,6 +66,7 @@ class CurrentData extends Component {
             this.setState({
                 current_data: res.data.currently,
                 icon: res.data.currently.icon,
+                daily_high_temp: res.data.daily.data[0]
             })
         }, (err) => {
             alert(err);
@@ -76,28 +78,13 @@ class CurrentData extends Component {
 
 
     handleDateFormat(current_date) {
-        // console.log(current_date + " Current date in handeDateFormat()")
+     
+        
         var d = new Date(current_date * 1000);
-        // console.log(d)
-        // let DateOnly = d.getDate() + "/" + (d.getMonth() + 1) + "/" + d.getFullYear();
         var formattedDate = d.getDate() + ", " + d.getFullYear();
-        // console.log(formattedDate + "formattedDate");
-        var hours = (d.getHours() < 10) ? "0" + d.getHours() : d.getHours();
-        // console.log(hours);
-        var ampm = hours >= 12 ? 'pm' : 'am';
-        // console.log(ampm);
-
-
         let day = days[d.getDay()];
-        // console.log(day);
-
-        var minutes = (d.getMinutes() < 10) ? "0" + d.getMinutes() : d.getMinutes();
-        var formattedTime = hours + ":" + minutes + " " + ampm;
-        // console.log(formattedTime)
-
         formattedDate = day + " " + formattedDate + " ";
         console.log(formattedDate)
-
         return (formattedDate);
     }
 
@@ -114,10 +101,15 @@ class CurrentData extends Component {
 
     convertTempToInt(current_temp) {
         let parseInt = current_temp ^ 0;
-        console.log(parseInt)
-
+        // console.log(parseInt)
         return parseInt
+    }
 
+    convertTempToInt2(dailyHighTemp, dailyLowTemp) {
+        let parseInt_high_temp = dailyHighTemp ^ 0;
+        let parseInt_low_temp = dailyLowTemp ^ 0;
+        // console.log(parseInt)
+        return parseInt_high_temp +  " / " + parseInt_low_temp 
     }
 
     render() {
@@ -125,7 +117,9 @@ class CurrentData extends Component {
         let current_short_summary = this.state.current_data.summary;
         let current_temp = this.state.current_data.apparentTemperature;
         let current_text_summary = this.state.current_data.icon;
-        console.log(current_temp)
+        let dailyHighTemp = this.state.daily_high_temp.apparentTemperatureHigh;
+        let dailyLowTemp = this.state.daily_high_temp.apparentTemperatureLow;
+        
         return (
             <div class="container">
 
@@ -161,7 +155,7 @@ class CurrentData extends Component {
                             </span>
                         </div>
                         <div>
-                            <span id="high_low_temp">81&#176; / 63&#176;</span>
+                            <span id="high_low_temp">{this.convertTempToInt2(dailyHighTemp,dailyLowTemp )} &#176;</span>
                         </div>
                         <div id="short_summary">
                             <span>{current_short_summary}</span>

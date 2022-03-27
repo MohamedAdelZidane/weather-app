@@ -83,10 +83,10 @@ class FutureData extends Component {
     handleTimeFormat(data) {
         var d = new Date(data * 1000);
         var hours = (d.getHours() < 10) ? "0" + d.getHours() : d.getHours();
-        console.log(hours);
+        // console.log(hours);
         var minutes = (d.getMinutes() < 10) ? "0" + d.getMinutes() : d.getMinutes();
         var formattedTime = hours + ":" + minutes ;
-        console.log(formattedTime)
+        // console.log(formattedTime)
         
             return (formattedTime);
 
@@ -104,7 +104,7 @@ class FutureData extends Component {
     displayIcon(data) {
         let counter = images.length - 1;
         let iconText = data;
-        console.log(data)
+        // console.log(data)
         if (iconText === "clear-night") {
             return images[0]
         } else {
@@ -115,7 +115,7 @@ class FutureData extends Component {
     displayDailyIcon(daily_data) {
         let counter = images.length - 1;
         let iconText = daily_data;
-        console.log(daily_data)
+        // console.log(daily_data)
         if (iconText === "clear-night") {
             return images[0]
         } else {
@@ -127,7 +127,7 @@ class FutureData extends Component {
 
     convertTempToInt(data) {
         let parseInt = data ^ 0;
-        console.log(parseInt)
+        // console.log(parseInt)
 
         return parseInt
 
