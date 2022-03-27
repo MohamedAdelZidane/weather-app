@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import './style.css'
 
 
 import { APICall } from "../APICall";
@@ -142,15 +143,15 @@ class FutureData extends Component {
 
                         <ul class="nav nav-tabs tabs_line" id="myTab" role="tablist">
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Hourly</button>
+                                <button class="nav-link active" id="hourly-tab" data-bs-toggle="tab" data-bs-target="#hourly" type="button" role="tab" aria-controls="hourly" aria-selected="true">Hourly</button>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Daily</button>
+                                <button class="nav-link" id="daily-tab" data-bs-toggle="tab" data-bs-target="#daily" type="button" role="tab" aria-controls="daily" aria-selected="false">Daily</button>
                             </li>
 
                         </ul>
                         <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="tab-pane fade show active" id="hourly" role="tabpanel" aria-labelledby="hourly-tab">
 
 
 
@@ -171,9 +172,7 @@ class FutureData extends Component {
                                                <div>
                                                    <span>{this.convertTempToInt(data.apparentTemperature)}</span>
                                                </div>
-                                                    {/* <div>
-                                                        <h1 class="">{data.time}</h1>
-                                                    </div> */}
+                                                  
 
                                                 
 
@@ -189,7 +188,7 @@ class FutureData extends Component {
 
                             </div>
 
-                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+                            <div class="tab-pane fade" id="daily" role="tabpanel" aria-labelledby="daily-tab">...</div>
                         </div>
                     </div>
 
