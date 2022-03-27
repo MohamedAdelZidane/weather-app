@@ -17,23 +17,14 @@
 }
 
 
-#app_name{
-    position: absolute;
-width: 301px;
-height: 42px;
-left: 120px;
-top: 41px;
-
-font-family: 'Work Sans';
-font-style: normal;
-font-weight: 700;
-font-size: 36px;
-line-height: 42px;
-letter-spacing: 0.05em;
-
-color: #FFFFFF;
-
-mix-blend-mode: normal;
+.app_name{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 #toggle_buttons{

@@ -87,7 +87,10 @@ class FutureData extends Component {
         var minutes = (d.getMinutes() < 10) ? "0" + d.getMinutes() : d.getMinutes();
         var formattedTime = hours + ":" + minutes ;
         console.log(formattedTime)
-        return (formattedTime);
+        
+            return (formattedTime);
+
+        
     }
 
     handleDateFormat(daily_data) {
@@ -204,7 +207,7 @@ class FutureData extends Component {
                                                    <span >{this.displayIcon(data.icon)}</span>
                                                </div>
                                                <div id="hourly_data_text">
-                                                   <span>{this.convertTempToInt(data.apparentTemperature)}</span>
+                                                   <span>{this.convertTempToInt(data.apparentTemperature)}&#176;</span>
                                                </div>
                                             </div>
                                         )}
@@ -234,7 +237,7 @@ class FutureData extends Component {
                                                    <span>{this.displayDailyIcon(daily_data.icon)}</span>
                                                </div>
                                                <div id="daily_data_text">
-                                                   <span>{this.convertDailyTempToInt(daily_data.apparentTemperatureHigh)}</span>
+                                                   <span>{this.convertDailyTempToInt(daily_data.apparentTemperatureHigh)}&#176;</span>
                                                </div>
                                             </div>
                                         )}

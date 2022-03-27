@@ -29,12 +29,12 @@ class NavBar extends Component {
     render() {
 
         return (
-            <div >
+            <div class="container">
 
-
-                <nav class="navbar navbar-light bg-light">
+                <div class="row">
+                <nav class="navbar">
                     <div class="container-fluid">
-                        <a class="navbar-brand">Instaweather</a>
+                        <a class="app_name">Instaweather</a>
                         <form class="d-flex">
                             <NavLink active className={({ isActive }) => (isActive ? "link-active" : "link")} to={"Temp_Celsius"} >
                                 <RecieveProps sendToggleValue={this.state.toggle_value} />
@@ -49,6 +49,10 @@ class NavBar extends Component {
                         </form>
                     </div>
                 </nav>
+                </div>
+
+
+                
 
 
 

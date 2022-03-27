@@ -16,6 +16,8 @@ border: 1px solid rgba(255, 255, 255, 0.5);
 
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
     color: #FFFFFF;
+    font-weight: 700;
+font-size: 22px;
     background: none;
     border: none;
     border-bottom: 3px solid #FFFFFF;
@@ -23,6 +25,8 @@ border: 1px solid rgba(255, 255, 255, 0.5);
 
 .nav-link{
     color: rgba(255, 255, 255, 0.75);
+    font-weight: 700;
+font-size: 22px;
 }
 
 
