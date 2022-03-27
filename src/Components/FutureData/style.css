@@ -26,4 +26,85 @@ border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 
+
+
+#hourly_data_text{
+    margin: 20%;
+    color: #fff;
+    font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 28px;
+text-align: center;
+
+}
+
+#daily_data_text{
+    margin: 20%;
+    color: #fff;
+    font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 28px;
+text-align: center;
+}
+
+::-webkit-scrollbar {
+    width: 1px;
+    height: 0px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+  .scrolling-wrapper{
+      overflow-x: auto;
+  }
+  .card-block{
+      height: 200px;
+      width: 163px;
+      background-color: #141414;
+      border: none;
+      background-position: center;
+      background-size: cover;
+      transition: all 0.2s ease-in-out !important;
+      border-radius: 8px;
+  }
+  .card-block img{
+      display: block;
+      border-radius: 50%;
+      height: 82px;
+      width: 82px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+  }
+  .card-block span{
+      display: block;
+      font-size: 18px;
+      color: #fff;
+      margin-top: 4px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  .card-block a{
+      background-color: #007bdc;
+      padding-left: 4px;
+      padding-right: 4px;
+      padding-top: 2px;
+      padding-bottom: 2px;
+      margin-right: auto;
+      margin-left: auto;
+      text-decoration: none;
+      color: #fff;
+      font-size: 12px;
+      border-radius: 4px;
+      margin-top: 12px;
+  }
+
   

@@ -132,7 +132,7 @@ class CurrentData extends Component {
 
 
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-6 currentData">
                         <div>
                             <span id="city_name">New Cairo</span>
                         </div>
@@ -152,7 +152,7 @@ class CurrentData extends Component {
 
 
 
-                    <div class="col-6">
+                    <div class="col-6 currentData">
                         <div>
 
 
