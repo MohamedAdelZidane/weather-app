@@ -1,19 +1,19 @@
 .c_button{
-    background-color: #E5E5E5;
+    /* background-color: #E5E5E5;
     border: none;
     border-left: 1px solid black;
     width: 76px;
-    height: 48px;
+    height: 48px; */
      
     
 }
 
 .f_button{
-    background-color: inherit;
+    /* background-color: inherit;
     background-repeat: no-repeat;
     border-left: none;
     border: none;
-    margin: 20px
+    margin: 20px */
 }
 
 
@@ -25,18 +25,44 @@
     color: #FFFFFF;
     text-decoration: none;
     text-transform: uppercase;
+    text-align: left;
+    display: block;
 }
 
 #toggle_buttons{
  
     left: 120px;
     top: 200px;
-
-
-
 }
 
 
+.c_btn{
+
+    float:right;
+    background-color: inherit;
+    background-repeat: no-repeat;
+    border-left: none;
+    border: none;
+    margin: 5px 20px 15px 20px;
+    color: #fff;
+    font-weight: 600;
+font-size: 14px;
+
+ }
+
+ .f_btn{
+
+    float:right;
+    width: 65px;
+    height: 35px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.25);
+    border: none;
+    border-left: 1px solid #fff;
+    font-weight: 600;
+font-size: 14px;
+
+ }
 
   
 

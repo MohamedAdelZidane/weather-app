@@ -31,24 +31,52 @@ class NavBar extends Component {
         return (
             <div class="container">
 
-                <div class="row">
-                <nav class="navbar">
-                    <div class="container-fluid">
+                <div class="row" style={{paddingTop: '5%'}}>
+                {/* <nav class="navbar"> */}
+                    <div class="col-6">
                         <a class="app_name">Instaweather</a>
-                        <form class="d-flex">
+
+                        
+
+
+                        {/* <form class="d-flex">
                             <NavLink active className={({ isActive }) => (isActive ? "link-active" : "link")} to={"Temp_Celsius"} >
                                 <RecieveProps sendToggleValue={this.state.toggle_value} />
                                 <button onClick={(e) => this.getBtnValue(e)} type="submit" class="c_button">C</button>
 
                             </NavLink>
                             <NavLink className={({ isActive }) => (isActive ? "link-active" : "link")} to={"Temp_Celsius"} >
-                                {/* <RecieveProps sendTrackingNumber={this.state.trackingNumber} /> */}
+                            <RecieveProps sendToggleValue={this.state.toggle_value} />
                                 <button onClick={(e) => this.getBtnValue(e)} type="submit" class="f_button">F</button>
 
                             </NavLink>
-                        </form>
+                        </form> */}
                     </div>
-                </nav>
+                    <div class="col-6">
+
+                    <NavLink to={"Temp_Celsius"} >
+                                <RecieveProps sendToggleValue={this.state.toggle_value} />
+                                {/* <button onClick={(e) => this.getBtnValue(e)} type="submit" class="c_button">C</button>
+                                 */}
+                    <button type="submit" class="f_btn" onClick={(e) => this.getBtnValue(e)} >F</button>
+
+
+                            </NavLink>
+                 
+    
+                            <NavLink to={"Temp_Celsius"} >
+                            <RecieveProps sendToggleValue={this.state.toggle_value} />
+                                {/* <button onClick={(e) => this.getBtnValue(e)} type="submit" class="f_button">F</button> */}
+
+    <button type="submit" class="c_btn" onClick={(e) => this.getBtnValue(e)}>C</button>
+
+
+                            </NavLink>
+
+
+
+                    </div>
+                {/* </nav> */}
                 </div>
 
 
