@@ -13,13 +13,9 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App backgroundImg">
-        
         <Routes>
-          <Route path="/" element={[<NavBar/>,<CurrentData />, <FutureData/>]}></Route>
-
-          <Route path="/Temp_Celsius" element={[<NavBar/>,<CurrentData />, <FutureData/>]}></Route>
-
-         
+          <Route path="/" element={[<NavBar />, <CurrentData />, <FutureData />]}></Route>
+          <Route path="/Temp_Celsius" element={[<NavBar />, <CurrentData />, <FutureData />]}></Route>
         </Routes>
       </div>
     </BrowserRouter>

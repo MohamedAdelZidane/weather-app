@@ -30,7 +30,6 @@ var image1 = <svg width="97" height="97" viewBox="0 0 97 97" fill="none" xmlns="
     <path d="M85.8958 72.8454C85.6701 72.8454 77.3008 72.8454 77.3008 72.8454C77.4507 71.2332 77.5507 71.0945 77.5539 70.1304C77.5797 61.5305 71.8384 54.0172 63.44 52.1663C58.6531 51.1119 54.0839 51.8906 50.3031 53.9318C45.6904 47.0667 38.0482 42.4362 29.2887 41.9009C28.1617 41.7462 27.0202 41.6543 25.8513 41.6543C11.5746 41.6543 0 53.598 0 68.3214C0 75.9942 3.16168 82.8932 8.19199 87.7574C12.6403 92.6926 18.8169 95.8817 26.1302 96.4121C26.1302 96.4121 85.6701 96.7072 85.8958 96.7072C91.8838 96.7072 96.7368 91.2238 96.7368 84.7747C96.7368 78.3288 91.8822 72.8454 85.8958 72.8454Z" fill="white" />
 </svg>;
 
-
 var image2 = <svg width="97" height="97" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M66 32.9994L58.5492 39.8158L61.5544 49.4582L51.6794 51.5909L49.4582 61.4463L39.8343 58.3767L32.9995 65.8133L26.1657 58.3767L16.5418 61.4463L14.3206 51.5909L4.44448 49.4582L7.45079 39.8158L0 32.9994L7.45079 26.1842L4.44557 16.5418L14.3206 14.408L16.5418 4.55367L26.1657 7.62331L32.9995 0.186722L39.8343 7.62331L49.4582 4.55367L51.6794 14.4091L61.5544 16.5418L58.5492 26.1842L66 32.9994Z" fill="#FCB641" />
     <path d="M32.9995 52.3127C43.4584 52.3127 51.9371 43.8341 51.9371 33.3751C51.9371 22.9161 43.4584 14.4375 32.9995 14.4375C22.5405 14.4375 14.0618 22.9161 14.0618 33.3751C14.0618 43.8341 22.5405 52.3127 32.9995 52.3127Z" fill="#FDC567" />
@@ -38,33 +37,22 @@ var image2 = <svg width="97" height="97" viewBox="0 0 66 66" fill="none" xmlns="
 
 var images = [image1, image2];
 
-
-
-
 class FutureData extends Component {
 
-
     constructor(props) {
-
         super(props);
         this.state = {
             current_data: [],
             hourly_data: [],
-            daily_data:[],
+            daily_data: [],
             icon: "",
             temp: "",
         }
     }
-
-
-
     componentDidMount() {
-
         var config = { "Access-Control-Allow-Origin": "*" }
         APICall(config, (res) => {
-
             console.log("Future Data Component, Got Data from apiCalls File")
-
             this.setState({
                 current_data: res.data.currently,
                 icon: res.data.currently.icon,
@@ -74,33 +62,22 @@ class FutureData extends Component {
         }, (err) => {
             alert(err);
         });
-
-
     }
-
-
-
     handleTimeFormat(data) {
         var d = new Date(data * 1000);
         var hours = (d.getHours() < 10) ? "0" + d.getHours() : d.getHours();
         // console.log(hours);
         var minutes = (d.getMinutes() < 10) ? "0" + d.getMinutes() : d.getMinutes();
-        var formattedTime = hours + ":" + minutes ;
-        // console.log(formattedTime)
-        
-            return (formattedTime);
-
-        
+        var formattedTime = hours + ":" + minutes;
+        return (formattedTime);
     }
-
     handleDateFormat(daily_data) {
         var d = new Date(daily_data * 1000);
         var formattedDate = d.getDate() + ", " + d.getFullYear();
         let day = days[d.getDay()];
-        formattedDate = day ;
+        formattedDate = day;
         return (formattedDate);
     }
-
     displayIcon(data) {
         let counter = images.length - 1;
         let iconText = data;
@@ -111,7 +88,6 @@ class FutureData extends Component {
             return images[1]
         }
     }
-
     displayDailyIcon(daily_data) {
         let counter = images.length - 1;
         let iconText = daily_data;
@@ -122,62 +98,25 @@ class FutureData extends Component {
             return images[1]
         }
     }
-
-    
-
     convertTempToInt(data) {
         let parseInt = data ^ 0;
         // console.log(parseInt)
-
         return parseInt
 
     }
-
     convertDailyTempToInt(daily_data) {
         let parseInt = daily_data ^ 0;
         console.log(parseInt)
-
         return parseInt
-
     }
-
-
-    
-
     render() {
-        // let hourly_temp = this.state.hourly_data;
-        // console.log("hourly_temp")
-        // console.log(hourly_temp)
 
         return (
 
             <div class="container">
 
-
-                {/* <div class="row" style={{ overflow: 'auto' }}>
-                    <div class="scrolling-wrapper row mx-0 flex-nowrap mt-6 pt-3">
-                        <div class="col-auto">
-                            <div class="card card-block card-2">
-                                <h1>mohamed adel</h1>
-                            </div>
-                        </div>
-                        <div class="col-auto">
-                            <div class="card card-block card-5">
-                                <h1>mohamed adel</h1>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
-
-
-
-
-
-
                 <div class="row">
-
                     <div class="col-12">
-
                         <ul class="nav nav-tabs tabs_line" id="myTab" role="tablist">
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link active" id="hourly-tab" data-bs-toggle="tab" data-bs-target="#hourly" type="button" role="tab" aria-controls="hourly" aria-selected="true">Hourly</button>
@@ -185,78 +124,55 @@ class FutureData extends Component {
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="daily-tab" data-bs-toggle="tab" data-bs-target="#daily" type="button" role="tab" aria-controls="daily" aria-selected="false">Daily</button>
                             </li>
-
                         </ul>
                         <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active" id="hourly" role="tabpanel" aria-labelledby="hourly-tab">
-
-
-
-
-
                                 <div class="row" style={{ overflow: 'auto' }}>
                                     <div class="scrolling-wrapper row mx-0 flex-nowrap mt-6 pt-3">
                                         {this.state.hourly_data.map(data =>
-
                                             <div class="col-auto">
-                                               
-                                               <div id="hourly_data_text">
-                                                   <span >{this.handleTimeFormat(data.time)}</span>
-                                               </div>
-                                               <div >
-                                                   <span >{this.displayIcon(data.icon)}</span>
-                                               </div>
-                                               <div id="hourly_data_text">
-                                                   <span>{this.convertTempToInt(data.apparentTemperature)}&#176;</span>
-                                               </div>
+
+                                                <div id="hourly_data_text">
+                                                    <span >{this.handleTimeFormat(data.time)}</span>
+                                                </div>
+                                                <div >
+                                                    <span >{this.displayIcon(data.icon)}</span>
+                                                </div>
+                                                <div id="hourly_data_text">
+                                                    <span>{this.convertTempToInt(data.apparentTemperature)}&#176;</span>
+                                                </div>
                                             </div>
                                         )}
-
                                     </div>
                                 </div>
-
-
-
-
-
                             </div>
 
                             <div class="tab-pane fade" id="daily" role="tabpanel" aria-labelledby="daily-tab">
 
-
-                            <div class="row" style={{ overflow: 'auto' }}>
+                                <div class="row" style={{ overflow: 'auto' }}>
                                     <div class="scrolling-wrapper row mx-0 flex-nowrap mt-6 pt-3">
                                         {this.state.daily_data.map(daily_data =>
 
                                             <div class="col-auto">
-                                               
-                                               <div id="daily_data_text">
-                                                   <span>{this.handleDateFormat(daily_data.time)}</span>
-                                               </div>
-                                               <div>
-                                                   <span>{this.displayDailyIcon(daily_data.icon)}</span>
-                                               </div>
-                                               <div id="daily_data_text">
-                                                   <span>{this.convertDailyTempToInt(daily_data.apparentTemperatureHigh)}&#176;</span>
-                                               </div>
+
+                                                <div id="daily_data_text">
+                                                    <span>{this.handleDateFormat(daily_data.time)}</span>
+                                                </div>
+                                                <div>
+                                                    <span>{this.displayDailyIcon(daily_data.icon)}</span>
+                                                </div>
+                                                <div id="daily_data_text">
+                                                    <span>{this.convertDailyTempToInt(daily_data.apparentTemperatureHigh)}&#176;</span>
+                                                </div>
                                             </div>
                                         )}
-
                                     </div>
                                 </div>
 
                             </div>
                         </div>
                     </div>
-
-
-
-
-
                 </div>
-
-
-
             </div>
         )
     }

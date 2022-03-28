@@ -38,10 +38,7 @@ var image2 = <svg width="97" height="97" viewBox="0 0 66 66" fill="none" xmlns="
 var images = [image1, image2];
 
 
-
-
 class CurrentData extends Component {
-
 
     constructor(props) {
 
@@ -54,15 +51,10 @@ class CurrentData extends Component {
         }
     }
 
-
-
     componentDidMount() {
-
         var config = { "Access-Control-Allow-Origin": "*" }
         APICall(config, (res) => {
-
             console.log("I'm Here, Got Data from apiCalls File")
-
             this.setState({
                 current_data: res.data.currently,
                 icon: res.data.currently.icon,
@@ -71,15 +63,9 @@ class CurrentData extends Component {
         }, (err) => {
             alert(err);
         });
-
-
     }
 
-
-
     handleDateFormat(current_date) {
-     
-        
         var d = new Date(current_date * 1000);
         var formattedDate = d.getDate() + ", " + d.getFullYear();
         let day = days[d.getDay()];
@@ -109,7 +95,7 @@ class CurrentData extends Component {
         let parseInt_high_temp = dailyHighTemp ^ 0;
         let parseInt_low_temp = dailyLowTemp ^ 0;
         // console.log(parseInt)
-        return parseInt_high_temp +  " / " + parseInt_low_temp 
+        return parseInt_high_temp + " / " + parseInt_low_temp
     }
 
     render() {
@@ -119,11 +105,9 @@ class CurrentData extends Component {
         let current_text_summary = this.state.current_data.icon;
         let dailyHighTemp = this.state.daily_high_temp.apparentTemperatureHigh;
         let dailyLowTemp = this.state.daily_high_temp.apparentTemperatureLow;
-        
+
         return (
             <div class="container">
-
-
 
                 <div class="row">
                     <div class="col-6 currentData">
@@ -135,8 +119,6 @@ class CurrentData extends Component {
                         </div>
                         <div>
                             <span id="current_icon"> {this.displayIcon()}
-
-
                             </span>
                         </div>
                         <div>
@@ -144,28 +126,20 @@ class CurrentData extends Component {
                         </div>
                     </div>
 
-
-
                     <div class="col-6 currentData">
                         <div>
-
-
                             <span id="current_temp">
                                 {this.convertTempToInt(current_temp)}&#176;
                             </span>
                         </div>
                         <div>
-                            <span id="high_low_temp">{this.convertTempToInt2(dailyHighTemp,dailyLowTemp )} &#176;</span>
+                            <span id="high_low_temp">{this.convertTempToInt2(dailyHighTemp, dailyLowTemp)} &#176;</span>
                         </div>
                         <div id="short_summary">
                             <span>{current_short_summary}</span>
                         </div>
                     </div>
-
                 </div>
-
-
-
             </div>
         )
     }

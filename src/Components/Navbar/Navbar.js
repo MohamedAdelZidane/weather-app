@@ -38,13 +38,10 @@ class NavBar extends Component {
                     <div class="col-6">
                         <NavLink to={"Temp_Celsius"} >
                             <RecieveProps sendToggleValue={this.state.toggle_value} />
-                            {/* <button onClick={(e) => this.getBtnValue(e)} type="submit" class="c_button">C</button>
-                                 */}
                             <button type="submit" class="f_btn" onClick={(e) => this.getBtnValue(e)} >F</button>
                         </NavLink>
                         <NavLink to={"Temp_Celsius"} >
                             <RecieveProps sendToggleValue={this.state.toggle_value} />
-                            {/* <button onClick={(e) => this.getBtnValue(e)} type="submit" class="f_button">F</button> */}
                             <button type="submit" class="c_btn" onClick={(e) => this.getBtnValue(e)}>C</button>
                         </NavLink>
                     </div>
